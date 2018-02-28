@@ -74,3 +74,14 @@ chrome.bookmarks.getSubTree('1', (res) => {
     }
   }
 });
+
+console.log(document.getElementById("add-new-list"));
+
+document.getElementById("add-new-list").addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('test');
+  const toDoList = document.getElementsByClassName('to-do-list')[0];
+
+  document.getElementsByClassName('three-col')[0].appendChild(toDoList.cloneNode(true));
+  return false;
+});
