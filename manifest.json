@@ -1,0 +1,10 @@
+{
+  "name": "new tabber",
+  "description": "new tab bruv!",
+  "version": "0.0.0.1",
+  "permissions" : ["management"],
+  "manifest_version": 2,
+  "chrome_url_overrides" : {
+      "newtab": "newtab.html"
+  }
+}
