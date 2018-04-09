@@ -1,7 +1,7 @@
 body {
   background: url('../assets/john-towner-154060-unsplash-resized.jpg');
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -162,8 +162,20 @@ body {
 
       &:hover {
         background: rgba(255,255,255,0.15);
+
+        .icon {
+          opacity: 1;
+        }
       }
     }
+  }
+
+  input {
+    background: none;
+    border: 0;
+    color: #fff;
+    width: 100%;
+    outline: 0;
   }
 }
 
@@ -179,4 +191,16 @@ body {
   clear: both;
   max-width: fit-content;
   color: rgba(200,200,255,1);
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  float: right;
+  margin: 0 0.25rem;
+  opacity: 0;
 }

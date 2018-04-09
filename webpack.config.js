@@ -12,12 +12,22 @@ var config = {
   },
   module: {
     rules: [
-      { test: /\.js$/, use: 'babel-loader' }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+          presets: ['es2015', 'react']
+          }
+        }
+      }
     ]
   },
   plugins: [
     new CopyWebpackPlugin([
       { from: 'src/newtab.html', to: 'newtab.html' },
+      { from: 'src/manifest.json', to: 'manifest.json' },
       { from: 'assets', to: 'assets/' },
     ])
   ]
